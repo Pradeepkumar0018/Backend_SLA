@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Closure Tasks</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        // TASK 1 – PRIVATE BANK BALANCE
+
+        function createBankAccount() {
+            let balance = 5000;
+
+            function checkBalance() {
+                console.log("Account Balance:", balance);
+            }
+
+            return checkBalance;
+        }
+
+        let account = createBankAccount();
+
+        let balance = 100000;
+
+        console.log("Outside Balance:", balance);
+        account();
+
+
+        // TASK 2 – DEPOSIT USING CLOSURE
+
+        function createAccount() {
+            let balance = 1000;
+
+            function deposit(amount) {
+                balance += amount;
+            }
+
+            function getBalance() {
+                console.log("Account Balance:", balance);
+            }
+
+            return {
+                deposit,
+                getBalance
+            };
+        }
+
+        let account2 = createAccount();
+
+        account2.deposit(500);
+        account2.deposit(200);
+
+        account2.getBalance();
+
+
+        // TASK 3 – PRIVATE COUNTER
+
+        function createCounter() {
+            let count = 0;
+
+            function increment() {
+                count++;
+            }
+
+            function decrement() {
+                count--;
+            }
+
+            function getCount() {
+                console.log("Count:", count);
+            }
+
+            return {
+                increment,
+                decrement,
+                getCount
+            };
+        }
+
+        let counter = createCounter();
+
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        counter.decrement();
+
+        counter.getCount();
+
+        let count = 100;
+
+        console.log("Outside Count:", count);
+        counter.getCount();
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //TASK1
+        let salaries = [15000, 20000, 25000, 30000, 35000];
+
+        let updatedSalaries = salaries.map(function (salary) {
+            return salary + 2000;
+        });
+
+        console.log(salaries);
+        console.log(updatedSalaries);
+
+        //TASK2
+        let marks = [35, 78, 42, 90, 25, 67, 55];
+
+        let eligibleStudents = marks.filter(function (mark) {
+            return mark >= 50;
+        });
+
+        console.log(eligibleStudents);
+
+        //TASK3
+        let products = [
+            { id: 101, name: "Laptop", price: 55000 },
+            { id: 102, name: "Mouse", price: 800 },
+            { id: 103, name: "Keyboard", price: 1500 },
+            { id: 104, name: "Monitor", price: 12000 }
+        ];
+
+        let product = products.find(function (product) {
+            return product.id === 103;
+        });
+
+        console.log(product);
+        console.log(product.name);
+
+        //TASK4
+        let cart = [
+            { name: "Shirt", price: 1200 },
+            { name: "Shoes", price: 2500 },
+            { name: "Watch", price: 3000 },
+            { name: "Bag", price: 1500 }
+        ];
+
+        let total = cart.reduce(function (accumulator, item) {
+            return accumulator + item.price;
+        }, 0);
+
+        console.log(total);
+    </script>
+    
+</body>
+</html>

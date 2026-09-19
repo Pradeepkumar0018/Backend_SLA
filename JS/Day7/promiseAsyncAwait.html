@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //TASK 1
+        const calculate = (a, b, callback) => {
+
+            let result = a + b;
+
+            callback(result);
+
+        };
+
+        calculate(10, 20, (result) => {
+
+            console.log(result);
+
+        });
+
+        //TASK 2
+        const checkNumber = (number) => {
+
+            return new Promise((resolve, reject) => {
+
+                if (number > 10) {
+                    resolve("Valid Number");
+                } else {
+                    reject("Invalid Number");
+                }
+
+            });
+
+        };
+
+        checkNumber(20)
+            .then((result) => {
+
+                console.log(result);
+
+            })
+            .catch((error) => {
+
+                console.log(error);
+
+            });
+
+
+        //TASK 3
+        const checkNumber1 = (number) => {
+
+            return new Promise((resolve, reject) => {
+
+                if (number > 10) {
+                    resolve("Valid Number");
+                } else {
+                    reject("Invalid Number");
+                }
+
+            });
+
+        };
+
+        const verifyNumber = async () => {
+
+            try {
+
+                const result = await checkNumber1(20);
+
+                console.log(result);
+
+            } catch (error) {
+
+                console.log(error);
+
+            }
+
+        };
+
+        verifyNumber();
+
+
+    </script>
+    
+</body>
+</html>

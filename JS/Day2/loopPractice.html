@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Looping Tasks</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        h2 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    <script>
+
+        // TASK 1 – PRINT NUMBERS
+
+        document.write("<h2>Task 1 – Print Numbers</h2>");
+
+        for (let i = 1; i <= 10; i++) {
+            document.write(i + "<br>");
+        }
+
+
+        // TASK 2 – EVEN NUMBERS
+
+        document.write("<h2>Task 2 – Even Numbers</h2>");
+
+        for (let i = 1; i <= 20; i++) {
+            if (i % 2 == 0) {
+                document.write(i + "<br>");
+            }
+        }
+
+
+        // TASK 3 – MULTIPLICATION TABLE
+
+        document.write("<h2>Task 3 – Multiplication Table</h2>");
+
+        let num = 5;
+
+        for (let i = 1; i <= 10; i++) {
+            document.write(num + " x " + i + " = " + (num * i) + "<br>");
+        }
+
+
+        // TASK 4 – STAR PATTERN
+
+        document.write("<h2>Task 4 – Star Pattern</h2>");
+
+        for (let i = 1; i <= 5; i++) {
+
+            let row = "";
+
+            for (let j = 1; j <= i; j++) {
+                row = row + "* ";
+            }
+
+            document.write(row + "<br>");
+        }
+
+
+        // TASK 5 – NUMBER PATTERN
+
+        document.write("<h2>Task 5 – Number Pattern</h2>");
+
+        for (let i = 1; i <= 5; i++) {
+
+            let row = "";
+
+            for (let j = 1; j <= i; j++) {
+                row = row + j + " ";
+            }
+
+            document.write(row + "<br>");
+        }
+
+    </script>
+
+</body>
+</html>
+
