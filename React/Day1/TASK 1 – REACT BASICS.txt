@@ -1,0 +1,193 @@
+TASK 1 – REACT BASICS
+
+1. What is React?
+
+Answer: React is a JavaScript library used to build user interfaces, especially interactive web applications. It allows developers to create the UI using small, reusable components.
+
+2. Why do we use React?
+
+Answer: We use React to build dynamic and interactive web applications. It makes applications easier to develop and maintain by using reusable components and updating only the required parts of the UI.
+
+3. Is React a library or framework?
+
+Answer: React is a JavaScript library. It mainly focuses on building the user interface. Other features such as routing and data fetching can be added using additional libraries.
+
+4. What are the main features of React?
+
+Answer: The main features of React include components, JSX, declarative UI, reusable components, props, state, one-way data flow, and efficient UI updates through reconciliation.
+
+5. What is a Single Page Application (SPA)?
+
+Answer: A Single Page Application is a web application that loads a main page once and dynamically updates its content without completely reloading the page for every navigation. React is commonly used to build SPAs.
+
+6. What is declarative UI?
+
+Answer: Declarative UI means describing what the UI should look like for a particular state. React then determines the required changes instead of the developer manually updating the DOM step by step.
+
+--------------------------------------------------
+
+TASK 2 – COMPONENTS
+
+1. What is a Component in React?
+
+Answer: A component is a reusable and independent part of a React user interface. It can contain its own structure, logic, and behavior.
+
+2. Why do we use Components?
+
+Answer: Components divide a large application into smaller and manageable parts. They improve code reusability, readability, organization, testing, and maintenance.
+
+3. What is a Functional Component?
+
+Answer: A Functional Component is a JavaScript function that returns React elements, usually written using JSX. It can receive props and use React Hooks such as useState and useEffect.
+
+4. What is Component-Based Architecture?
+
+Answer: Component-Based Architecture is an approach where an application is built using small, independent, and reusable components. Each component handles a particular part of the UI or functionality.
+
+5. What is a Component Tree?
+
+Answer: A Component Tree is the hierarchical structure of components in a React application. A parent component can contain child components, which can contain further child components.
+
+6. Why should component names start with a capital letter?
+
+Answer: React uses capitalization to distinguish user-defined components from HTML elements. For example, <Header /> is treated as a React component, while <header> is treated as an HTML element.
+
+7. What is a reusable component?
+
+Answer: A reusable component is a component that can be used in multiple places with different data or configurations. For example, a Button component can be reused throughout an application.
+
+--------------------------------------------------
+
+TASK 3 – JSX
+
+1. What is JSX?
+
+Answer: JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows us to write UI-like markup inside JavaScript code.
+
+2. Why do we use JSX in React?
+
+Answer: JSX makes React code easier to read and write because we can describe the UI structure along with JavaScript logic. JSX is converted into JavaScript that creates React elements.
+
+3. Is JSX HTML?
+
+Answer: No. JSX is not HTML. It looks similar to HTML, but it is a JavaScript syntax extension with its own rules.
+
+4. How do we write JavaScript expressions inside JSX?
+
+Answer: We write JavaScript expressions inside curly braces { }. For example: <h1>Hello, {name}</h1>.
+
+5. Why do we use className instead of class?
+
+Answer: We use className because JSX follows JavaScript property naming conventions, and class is a reserved keyword in JavaScript.
+
+6. What is React Fragment?
+
+Answer: A React Fragment allows us to group multiple elements without adding an extra HTML element to the DOM. It can be written as <>...</> or <React.Fragment>...</React.Fragment>.
+
+7. What are the important JSX rules?
+
+Answer: Important JSX rules include: use one root element or a Fragment, close all tags, use className instead of class, use camelCase for many attributes and events, use { } for JavaScript expressions, and start component names with a capital letter.
+
+--------------------------------------------------
+
+TASK 4 – DOM, VIRTUAL DOM & RECONCILIATION
+
+1. What is DOM?
+
+Answer: DOM stands for Document Object Model. It is the browser's representation of an HTML document. JavaScript can use the DOM to read and modify elements on a web page.
+
+2. What is Virtual DOM?
+
+Answer: Virtual DOM is a lightweight, in-memory representation of the UI used by React as part of its rendering process. React compares render results to determine the required changes to the browser DOM.
+
+3. What is the difference between DOM and Virtual DOM?
+
+Answer: The DOM is the actual document structure maintained by the browser. The Virtual DOM is an in-memory representation used by React to compare UI changes before updating the actual browser DOM.
+
+4. What is Reconciliation in React?
+
+Answer: Reconciliation is the process in which React compares the new render result with the previous result and determines what changes need to be made to the UI.
+
+5. What is Diffing?
+
+Answer: Diffing is the process of comparing the previous and new React element trees to find the differences between them.
+
+6. How does React identify changes in the UI?
+
+Answer: React compares the new render result with the previous render result. It uses element types, props, text, and keys in lists to identify what has changed.
+
+7. Why is key important while rendering lists?
+
+Answer: A key gives each list item a stable identity. React uses keys to identify which items have changed, been added, removed, or reordered. Keys should be stable and unique among sibling items.
+
+--------------------------------------------------
+
+TASK 5 – REACT RENDERING PROCESS
+
+1. What is Rendering?
+
+Answer: Rendering is the process in which React runs a component and calculates what the UI should look like based on its current props and state.
+
+2. What is Re-rendering?
+
+Answer: Re-rendering means React runs a component again to calculate an updated UI representation when relevant data such as state, props, or context changes.
+
+3. What causes a component to re-render?
+
+Answer: A component can re-render when its state changes, when it receives new props, when a relevant context value changes, or when its parent component renders again.
+
+4. Does re-render mean the complete browser DOM is recreated?
+
+Answer: No. Re-rendering does not mean that the complete browser DOM is recreated. React calculates the new UI representation and updates only the necessary parts of the browser DOM.
+
+5. What happens during reconciliation?
+
+Answer: During reconciliation, React compares the previous render result with the new render result. It identifies the differences and determines the required UI updates.
+
+6. What is the relationship between Virtual DOM, Diffing and Reconciliation?
+
+Answer: The Virtual DOM is a common term for React's in-memory UI representation. Diffing compares the previous and new render results. Reconciliation is the broader process of determining what changes are needed based on that comparison. The required changes are then applied to the browser DOM.
+
+7. Explain the React rendering process in your own words.
+
+Answer: First, a component returns JSX. React creates a React element tree from that JSX. When state, props, or other relevant data changes, React renders the component again. It compares the new result with the previous result during reconciliation. Diffing identifies what changed, and React then applies the required changes to the browser DOM. Finally, the user sees the updated UI.
+
+REACT RENDERING FLOW
+
+Component
+
+↓
+
+JSX
+
+↓
+
+Rendering
+
+↓
+
+React Element Tree / Virtual DOM
+
+↓
+
+State or Props Change
+
+↓
+
+Re-render
+
+↓
+
+Reconciliation
+
+↓
+
+Diffing
+
+↓
+
+Required DOM Update
+
+↓
+
+Browser UI
